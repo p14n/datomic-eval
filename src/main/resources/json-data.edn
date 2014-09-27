@@ -1,0 +1,8 @@
+[
+
+{:widget-config/name "limit", :widget-config/type "number", :widget-config/value "12", :db/id #db/id[:db.part/user -1000002]}
+{:widget-config/name "mylist", :widget-config/type "array", :widget-config/value "[1,2,3]", :db/id #db/id[:db.part/user -1000003]}
+{:widget-config/name "myobject", :widget-config/type "object", :widget-config/value "{\"a\": \"b\"}", :db/id #db/id[:db.part/user -1000004]}
+
+{:widget/user "Brendan", :widget/name "v2.crm.outofbalance", :widget/config [#db/id[:db.part/user -1000002] #db/id[:db.part/user -1000003] #db/id[:db.part/user -1000004]], :db/id #db/id[:db.part/user -1000001]}
+]

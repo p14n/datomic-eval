@@ -1,0 +1,18 @@
+[{
+ "title":"Investment Manager",
+  "structure":"4-8",
+  "rows": [{
+   "columns": [{
+    "class":"col-md-4",
+    "widgets":[{
+     "type":"v2.crm.outofbalance",
+     "config": {
+      "limit": "12N",
+      "mylist":["1N","2N","3N"],
+      "myobject":{"a":"b"}
+     }
+    },{
+     "type":"v2.crm.ordersforsignoff"
+    }]
+   }]
+  }]}]

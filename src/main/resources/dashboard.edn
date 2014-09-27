@@ -1,0 +1,96 @@
+[
+;;dashboard
+{
+  :db/id #db/id[:db.part/db]
+  :db/ident :dashboard/title
+  :db/cardinality :db.cardinality/one
+  :db/valueType :db.type/string
+  :db.install/_attribute :db.part/db
+}
+{
+  :db/id #db/id[:db.part/db]
+  :db/ident :dashboard/structure
+  :db/cardinality :db.cardinality/one
+  :db/valueType :db.type/string
+  :db.install/_attribute :db.part/db
+}
+{
+  :db/id #db/id[:db.part/db]
+  :db/ident :dashboard/rows
+  :db/cardinality :db.cardinality/many
+  :db/valueType :db.type/ref
+  :db.install/_attribute :db.part/db
+}
+
+;;row
+{
+  :db/id #db/id[:db.part/db]
+  :db/ident :rows/columns
+  :db/cardinality :db.cardinality/many
+  :db/valueType :db.type/ref
+  :db.install/_attribute :db.part/db
+}
+
+;;column
+{
+  :db/id #db/id[:db.part/db]
+  :db/ident :columns/class
+  :db/cardinality :db.cardinality/one
+  :db/valueType :db.type/string
+  :db.install/_attribute :db.part/db
+}
+{
+  :db/id #db/id[:db.part/db]
+  :db/ident :columns/widgets
+  :db/cardinality :db.cardinality/many
+  :db/valueType :db.type/ref
+  :db.install/_attribute :db.part/db
+}
+
+;;widget
+{
+  :db/id #db/id[:db.part/db]
+  :db/ident :widgets/type
+  :db/cardinality :db.cardinality/one
+  :db/valueType :db.type/string
+  :db.install/_attribute :db.part/db
+}
+{
+  :db/id #db/id[:db.part/db]
+  :db/ident :widgets/config
+  :db/cardinality :db.cardinality/one
+  :db/valueType :db.type/ref
+  :db.install/_attribute :db.part/db
+}
+
+;;config
+{
+  :db/id #db/id[:db.part/db]
+  :db/ident :config/limit
+  :db/cardinality :db.cardinality/one
+  :db/valueType :db.type/bigint
+  :db.install/_attribute :db.part/db
+}
+{
+  :db/id #db/id[:db.part/db]
+  :db/ident :config/mylist
+  :db/cardinality :db.cardinality/many
+  :db/valueType :db.type/bigint
+  :db.install/_attribute :db.part/db
+}
+{
+  :db/id #db/id[:db.part/db]
+  :db/ident :config/myobject
+  :db/cardinality :db.cardinality/one
+  :db/valueType :db.type/ref
+  :db.install/_attribute :db.part/db
+}
+
+;;myobject
+{
+  :db/id #db/id[:db.part/db]
+  :db/ident :myobject/a
+  :db/cardinality :db.cardinality/one
+  :db/valueType :db.type/string
+  :db.install/_attribute :db.part/db
+}]
